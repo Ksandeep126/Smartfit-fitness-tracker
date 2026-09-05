@@ -1,0 +1,71 @@
+[33mcommit c467b167116ece1d30974420d33aaebacf802c75[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Ksandeep126 <sandeepkamar5@gmail.com>
+Date:   Tue Aug 18 17:33:00 2026 +0530
+
+    Initial commit: FlexiFit AI fitness tracker
+
+ .claude/settings.local.json                |    7 [32m+[m
+ .gitignore                                 |    2 [32m+[m
+ LITERATURE_REVIEW.md                       |  440 [32m+++[m
+ README.md                                  |  359 [32m+++[m
+ backend/.gitignore                         |    2 [32m+[m
+ backend/config/db.js                       |   13 [32m+[m
+ backend/local_llm_server.py                |   23 [32m+[m
+ backend/middleware/authMiddleware.js       |   31 [32m+[m
+ backend/models/Habit.js                    |   14 [32m+[m
+ backend/models/Meal.js                     |   16 [32m+[m
+ backend/models/User.js                     |   35 [32m+[m
+ backend/models/WaterIntake.js              |   12 [32m+[m
+ backend/models/WeightLog.js                |   12 [32m+[m
+ backend/models/Workout.js                  |   14 [32m+[m
+ backend/package-lock.json                  | 1690 [32m+++++++++++[m
+ backend/package.json                       |   24 [32m+[m
+ backend/routes/aiRoutes.js                 |   73 [32m+[m
+ backend/routes/analyticsRoutes.js          |  317 [32m++[m
+ backend/routes/authRoutes.js               |   84 [32m+[m
+ backend/routes/habitRoutes.js              |   53 [32m+[m
+ backend/routes/mealRoutes.js               |  120 [32m+[m
+ backend/routes/nutritionRoutes.js          |  205 [32m++[m
+ backend/routes/userRoutes.js               |   29 [32m+[m
+ backend/routes/workoutRoutes.js            |  136 [32m+[m
+ backend/seedDemoData.js                    |  125 [32m+[m
+ backend/server.js                          |   40 [32m+[m
+ backend/utils/aiClient.js                  |  162 [32m+[m
+ backend/utils/aiClient.local.js            |   17 [32m+[m
+ frontend/.gitignore                        |    2 [32m+[m
+ frontend/.vscode/tasks.json                |   10 [32m+[m
+ frontend/index.html                        |   12 [32m+[m
+ frontend/package-lock.json                 | 1753 [32m+++++++++++[m
+ frontend/package.json                      |   18 [32m+[m
+ frontend/public/images/Aicoach.jpeg        |  Bin [31m0[m -> [32m37000[m bytes
+ frontend/public/images/BMIclaculator.jpeg  |  Bin [31m0[m -> [32m40623[m bytes
+ frontend/public/images/LOGOO.jpg           |  Bin [31m0[m -> [32m93146[m bytes
+ frontend/public/images/image_4.jpeg        |  Bin [31m0[m -> [32m72549[m bytes
+ frontend/public/images/logo.jpeg           |  Bin [31m0[m -> [32m60370[m bytes
+ frontend/public/images/meal coach.jpeg     |  Bin [31m0[m -> [32m46172[m bytes
+ frontend/public/images/workoutplans.jpeg   |  Bin [31m0[m -> [32m42556[m bytes
+ frontend/src/App.jsx                       |  108 [32m+[m
+ frontend/src/api/axiosClient.js            |   15 [32m+[m
+ frontend/src/components/Footer.jsx         |  139 [32m+[m
+ frontend/src/components/Navbar.jsx         |  651 [32m++++[m
+ frontend/src/components/ProtectedRoute.jsx |   32 [32m+[m
+ frontend/src/context/AuthContext.jsx       |   60 [32m+[m
+ frontend/src/index.css                     |   15 [32m+[m
+ frontend/src/main.jsx                      |   10 [32m+[m
+ frontend/src/pages/Analytics.jsx           |  677 [32m+++++[m
+ frontend/src/pages/Auth.css                |  142 [32m+[m
+ frontend/src/pages/BMICalculator.jsx       | 1006 [32m+++++++[m
+ frontend/src/pages/Chat.jsx                |  410 [32m+++[m
+ frontend/src/pages/Habits.jsx              |  334 [32m+++[m
+ frontend/src/pages/History.jsx             |  685 [32m+++++[m
+ frontend/src/pages/Home.css                |  139 [32m+[m
+ frontend/src/pages/Home.jsx                |  408 [32m+++[m
+ frontend/src/pages/Login.jsx               |  285 [32m++[m
+ frontend/src/pages/Meals.jsx               |  895 [32m++++++[m
+ frontend/src/pages/Profile.jsx             |  587 [32m++++[m
+ frontend/src/pages/Register.jsx            |  296 [32m++[m
+ frontend/src/pages/ResetPassword.jsx       |  415 [32m+++[m
+ frontend/src/pages/Workouts.jsx            |  374 [32m+++[m
+ package-lock.json                          | 4493 [32m++++++++++++++++++++++++++++[m
+ package.json                               |    9 [32m+[m
+ 64 files changed, 18035 insertions(+)
